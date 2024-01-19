@@ -15,20 +15,20 @@
 // }
 
 let ul = document.querySelector('[id="change"]');
-let li = document.querySelectorAll('[class="myli"]');
+let point = document.querySelectorAll('[class="myli"]');
 let txt = " "
 
 function nameDes() {
   let fTxt = new Object()
-  for (let i = 0; i < li.length; i++) {
-    li[i].onclick = () => {
-      for (let j = 0; j < li.length; j++) {
+  for (let i = 0; i < point.length; i++) {
+    point[i].onclick = () => {
+      for (let j = 0; j < point.length; j++) {
         if (i == j)
           continue
-        removeActive(li)
+        removeActive(point)
       }
-      li[i].classList.add("active");
-      txt = li[i].innerHTML
+      point[i].classList.add("active");
+      txt = point[i].innerHTML
       console.log(txt)
       for (let k = 0; k < 4; k++) {
         if (txt == des[k]["name"]) {
