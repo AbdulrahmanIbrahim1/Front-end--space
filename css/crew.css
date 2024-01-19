@@ -28,6 +28,12 @@ header .container {
   /* position: relative; */
 }
 
+@media (max-width:767px) {
+  body{
+    background-image: url("/assets/crew/background-crew-mobile.jpg") ;
+  }
+}
+
 header .container .space {
   margin-top: 40px;
   /* position: relative; */
@@ -102,6 +108,17 @@ section .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   color: aliceblue;
+}
+
+@media (max-width:767px) {
+  section .container{
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+    section .container .text{
+      grid-row: 2;
+    }
 }
 
 section .container .text {
