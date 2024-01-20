@@ -4,11 +4,15 @@
 }
 
 body {
-  background-image: url("../backgrounds/background-crew-desktop.jpg") ;
+  background-image: url("../backgrounds/background-crew-desktop.jpg");
   background-size: cover;
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
+}
+
+.my-body {
+  background-image: url("../backgrounds/background-crew-desktop.jpg");
 }
 
 .container {
@@ -29,8 +33,8 @@ header .container {
 }
 
 @media (max-width:767px) {
-  body{
-    background-image: url("/assets/crew/background-crew-mobile.jpg") ;
+  body {
+    background-image: url("/assets/crew/background-crew-mobile.jpg");
   }
 }
 
@@ -111,7 +115,7 @@ section .container {
 }
 
 @media (max-width:767px) {
-  section .container{
+  section .container {
     grid-template-columns: auto;
     grid-template-rows: repeat(2, 1fr);
   }
