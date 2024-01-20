@@ -4,11 +4,17 @@
 }
 
 body {
-  background-image: url("../backgrounds/background-destination-desktop.jpg") no-repeat;
+  /* background-image: url("../backgrounds/background-destination-desktop.jpg") no-repeat; */
   background-size: cover;
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
+}
+
+.my-body {
+  /* height: 100vh; */
+  background-image: url("../backgrounds/background-destination-desktop.jpg");
+  background-size: cover;
 }
 
 .container {
