@@ -52,13 +52,17 @@ header .container .space {
   transform: translateY(-50%);
   width: 40%;
   height: 2px;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
+  background-color: #55647391;
+  backdrop-filter: blur(1px);
+  z-index: 2;
 }
 
 header .container .links {
   width: 55%;
   text-align: center;
-  background-color: #3f556a91;
+  background-color: #2a364291;
+  backdrop-filter: blur(2px);
   padding: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
