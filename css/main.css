@@ -4,8 +4,8 @@
 }
 
 body {
-  /* background-image: url("../backgrounds/background-home-desktop.jpg") no-repeat; */
-  overflow: hidden;
+  background-image: url("../backgrounds/background-home-desktop.jpg");
+  overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
 }
@@ -14,6 +14,18 @@ body {
   height: 100vh;
   background-image: url("../backgrounds/background-home-desktop.jpg");
   background-size: cover;
+}
+
+@media (max-width:767px) {
+  body {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+    background-size: cover;
+  }
+
+  .my-body {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+    background-size: cover;
+  }
 }
 
 .container {
@@ -38,7 +50,7 @@ header .container .space {
   /* position: relative; */
   /* top: 50%; */
   transform: translateY(-50%);
-  width: 50%;
+  width: 40%;
   height: 2px;
   background-color: antiquewhite;
 }
@@ -54,14 +66,114 @@ header .container .links {
   right: 0;
 }
 
+@media (min-width: 768px) {
+  header .links .icon {
+    display: none;
+  }
+}
+
+/* header .links ul {
+  display: flex;
+} */
+
+
+
+/* =icon= */
+header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  /* display: none; */
+}
+
+@media (max-width: 767px) {
+  header .container .space {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  header .links .icon {
+    display: none;
+  }
+}
+
+.container .links .icon span {
+  height: 3px;
+  background-color: aliceblue;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+
+.container .links .icon span:first-child {
+  width: 100%;
+}
+
+.container .links .icon span:nth-child(2) {
+  width: 50%;
+}
+
+.container .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+
+.container .links .icon span:last-child {
+  width: 100%;
+}
+
+/* =icon= */
+
 header .container ul {
   list-style: none;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .clickList {
+    display: flex !important;
+    width: 250px;
+    position: absolute;
+    right: 5px;
+    top: 18px;
+  }
+
+  header .links ul {
+    display: none;
+    background-color: rgba(18, 30, 49, 0.577);
+    border-radius: 10px;
+    /* display: flex; */
+    flex-direction: column;
+  }
+
+
+  header .links ul li:hover {
+    padding-left: 30px;
+  }
+
+  header .container ul li::after {
+    display: none;
+  }
+
+  header .links {
+    background-color: transparent !important;
+    position: relative;
+  }
+
+  header .links .icon {
+    display: flex;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+  }
+
+
 }
 
 header .container ul li {
   padding: 10px;
   list-style: none;
-  display: inline-block;
+  /* display: inline-block; */
   margin-left: 30px;
   transition: .3s;
   cursor: pointer;
@@ -84,6 +196,13 @@ header .container .links li:hover::after {
   content: "";
 }
 
+@media (max-width: 767px) {
+  header .links ul li {
+    margin-left: 0;
+    right: 0;
+  }
+}
+
 header .container ul li a {
   color: aliceblue;
   text-decoration: none;
@@ -100,7 +219,7 @@ header .container ul li a {
 .content .container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
   color: aliceblue;
   justify-content: center;
   align-items: center;
@@ -110,10 +229,32 @@ header .container ul li a {
   /* background-color: aqua; */
 }
 
+@media (max-width: 767px) {
+  .content .container {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+  }
+}
+
 .content .container .left p {
   line-height: 2;
   color: #f0f8ffad;
   font-size: 30px;
+}
+
+@media (max-width: 767px) {
+  .content .container .left {
+    max-height: 150px;
+  }
+
+  .content .container .left h2+p {
+    margin: 10px;
+  }
+
+  .content {
+    margin: -20px;
+  }
 }
 
 .content .container .left h2 {
@@ -149,4 +290,22 @@ header .container ul li a {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .content .container .right {
+    grid-row: 18;
+  }
+
+  .content .container .left p {
+    font-size: 20px;
+  }
+
+  .content .container .left h2 {
+    font-size: 55px;
+  }
+
+  .content .container .left h2+p {
+    margin: 10px;
+  }
 }

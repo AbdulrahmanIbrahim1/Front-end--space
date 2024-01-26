@@ -4,7 +4,7 @@
 }
 
 body {
-  /* background-image: url("../backgrounds/background-crew-desktop.jpg"); */
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
   background-size: cover;
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
@@ -12,19 +12,18 @@ body {
 }
 
 .my-body {
-  background-image: url("../backgrounds/background-crew-desktop.jpg");
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
   background-size: cover;
 }
 
 @media (max-width:767px) {
   body {
-    background-image: url("../assets/crew/background-crew-mobile.jpg");
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
     background-size: cover;
-
   }
 
   .my-body {
-    background-image: url("../assets/crew/background-crew-mobile.jpg");
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
     background-size: cover;
   }
 }
@@ -72,12 +71,6 @@ header .container .links {
     display: none;
   }
 }
-
-/* header .links ul {
-  display: flex;
-} */
-
-
 
 /* =icon= */
 header .links .icon {
@@ -216,6 +209,13 @@ h2 {
   margin: 40px 0px 40px 150px;
 }
 
+@media (max-width: 767px) {
+  h2 {
+    margin: 20px;
+    text-align: center;
+  }
+}
+
 h2 span {
   color: #faebd74d;
 }
@@ -231,40 +231,24 @@ section .container {
 }
 
 @media (max-width:767px) {
-  section {
-    padding: 0px 30px;
-  }
-
   section .container {
     grid-template-columns: auto;
     grid-template-rows: repeat(2, auto);
+  }
+
+  section {
     padding: 0;
   }
-
-  section .container .image {
-    grid-row: 1;
-    max-width: 80%;
-  }
-
-  section .container .image img {
-    width: 100%;
-    padding: 0 35px;
-  }
-
-  h2 {
-    color: #faebd7bf;
-    margin: 20px auto;
-    text-align: center;
-  }
-
 }
 
 section .container .text {
   padding: 50px;
   padding-top: 100px;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 30px;
 }
-
 
 section .container .text p {
   line-height: 2;
@@ -290,40 +274,68 @@ section .container .text h2+p {
 }
 
 @media (max-width:767px) {
-  section .container .text {
-    padding: 30px;
+  section .container {
     text-align: center;
   }
 
-  section .container .text h2 {
-    font-size: 34px;
+  section .container .image {
+    grid-row: 1;
+    width: 100%;
   }
 
+  section .container .image img {
+    width: 100%;
+  }
+
+  section .container .text {
+    padding: 5px;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  section .container .text h2 {
+    font-size: 40px;
+  }
 }
 
+
 section .container .text .points {
-  position: absolute;
-  bottom: 30px
+  /* position: absolute;
+  bottom: 30px */
+  display: flex;
+  flex-direction: column;
 }
 
 section .container .text .points .point {
-  width: 30px;
-  height: 30px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  display: inline-block;
-  margin-right: 20px;
+  /* display: inline-block; */
+  /* margin-right: 20px; */
+  margin: 15px 0;
   background-color: #6060609c;
   cursor: pointer;
 }
 
 section .container .text .points .active {
   background-color: #f0f8ffbd;
+  color: #1c262f;
 }
 
 @media (max-width:767px) {
   section .container .text .points {
-    position: absolute;
-    bottom: -15px;
-    margin-left: 35px;
+    grid-row: 1;
+    flex-direction: row;
+    margin: 15px auto;
+  }
+
+  section .container .text .points .point {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+
   }
 }

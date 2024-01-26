@@ -1,5 +1,4 @@
 
-// ================
 
 setTimeout(()=>{
   console.log(typeof myob["crew"])
